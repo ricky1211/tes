@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <!-- Top AppBar / Header Bar -->
+    <LinearLayout
+        android:id="@+id/app_bar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/rt_badge_container">
+
+                <TextView
+                    android:id="@+id/header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PORTAL WARGA RT 02"
+                    android:textColor="@color/primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perum Graha Cikarang • Bekasi"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rt_badge_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_launcher_background"
+                android:backgroundTint="@color/primary_light"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blok F &amp; G"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- CONTENT VIEWS CONTAINER -->
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/app_bar_header"
+        android:padding="8dp">
+
+        <!-- SECTION 1: PENGUMUMAN (ANNOUNCEMENTS) -->
+        <ScrollView
+            android:id="@+id/section_announcements"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Welcome Board banner -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/primary_light"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary_light"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📢 Info Terkini RT 02"
+                            android:textColor="@color/primary_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Selalu dapatkan pengumuman resmi dan kegiatan lingkungan perumahan secara real-time di sini."
+                            android:textColor="@color/primary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Announcement List Items -->
+                <!-- Item 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ann_card_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="@color/accent_orange_light"
+                                android:paddingStart="8dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="3dp"
+                                android:text="PENTING"
+                                android:textColor="@color/accent_orange"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="31 May 2026"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Pembayaran Iuran Bulanan Wisma &amp; Keamanan"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Diberitahukan kepada seluruh warga RT 02 Blok F dan G bahwa iuran bulanan untuk kebersihan, sampah, dan siskamling..."
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp"
+                            android:maxLines="2" />
+
+                        <Button
+                            android:id="@+id/btn_ann_read_1"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="Baca Selengkapnya" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Item 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ann_card_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="@color/primary_light"
+                                android:paddingStart="8dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="3dp"
+                                android:text="KERJA BAKTI"
+                                android:textColor="@color/primary"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="28 May 2026"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Gotong Royong &amp; Fogging Nyamuk Mandiri"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Dalam rangka mencegah wabah demam berdarah (DBD), pengurus RT mengadakan kerja bakti pembersihan selokan dan saluran air..."
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp"
+                            android:maxLines="2" />
+
+                        <Button
+                            android:id="@+id/btn_ann_read_2"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="Baca Selengkapnya" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Item 3 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ann_card_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="@color/accent_blue_light"
+                                android:paddingStart="8dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="3dp"
+                                android:text="SECURITY"
+                                android:textColor="@color/accent_blue"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="24 May 2026"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Kebijakan Tamu 1x24 Jam Wajib Lapor RT"
+                            android:textColor="@color/text_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Kondusifitas malaming siskamling perlu ditingkatkan. Bagi warga yang kedatangan tamu menginap melebihi 24 jam wajib melaporkan..."
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp"
+                            android:maxLines="2" />
+
+                        <Button
+                            android:id="@+id/btn_ann_read_3"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="Baca Selengkapnya" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- SECTION 2: CCTV PORTAL RT 02 -->
+        <LinearLayout
+            android:id="@+id/section_cctv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📹 Siskamling Digital RT 02"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pemantauan live 4 CCTV utama demi keamanan komplek"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- CCTV Simulated Screen Monitor -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#1E293B"
+                app:strokeWidth="1dp">
+
+                <RelativeLayout
+                    android:id="@+id/cctv_screen_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0F172A">
+
+                    <!-- CCTV Active Canvas Drawing / Simulated Video View -->
+                    <!-- Custom progress bar and dynamic graphic lines -->
+                    <ProgressBar
+                        android:id="@+id/cctv_loader"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminateTint="@color/active_red"
+                        android:visibility="gone" />
+
+                    <!-- Live Overlay indicators -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="12dp"
+                        android:background="#70000000"
+                        android:paddingStart="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:id="@+id/cctv_rec_indicator"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/ic_launcher_foreground"
+                            android:backgroundTint="@color/active_red"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LIVE REC"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- CAM NAME Tag -->
+                    <TextView
+                        android:id="@+id/cctv_cam_title_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="12dp"
+                        android:background="#80000000"
+                        android:padding="4dp"
+                        android:text="CAM 01 - Portal Gerbang Utama"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Scanlines effect -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_launcher_background"
+                        android:backgroundTint="#0500FF00"
+                        android:alpha="0.3" />
+
+                    <!-- Motion Sensor detected ticker -->
+                    <LinearLayout
+                        android:id="@+id/cctv_motion_ticker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="#D9B30000"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚠️ PERGERAKAN TERDETEKSI"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Absolute Camera Bottom Overlay Info -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#AA000000"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/cctv_timestamp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2026-05-31 17:39:44"
+                            android:textColor="#34D399"
+                            android:fontFamily="monospace"
+                            android:textSize="12sp"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:id="@+id/cctv_fps_bitrate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FHD 1080p | 2.5 Mbps"
+                            android:textColor="#FFD700"
+                            android:fontFamily="monospace"
+                            android:textSize="12sp"
+                            android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CCTV Select Controls -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Lokasi Kamera:"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <!-- Cam 01 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_cam_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="1.5dp">
+                    <TextView
+                        android:id="@+id/tx_cam_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="CAM 01\nPortal Utama"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Cam 02 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_cam_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/divider_line"
+                    app:strokeWidth="1dp">
+                    <TextView
+                        android:id="@+id/tx_cam_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="CAM 02\nBelakang Pos"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="13sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Cam 03 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_cam_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/divider_line"
+                    app:strokeWidth="1dp">
+                    <TextView
+                        android:id="@+id/tx_cam_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="CAM 03\nBlok F Sektor"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="13sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Cam 04 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_cam_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/divider_line"
+                    app:strokeWidth="1dp">
+                    <TextView
+                        android:id="@+id/tx_cam_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="CAM 04\nBlok G Sektor"
+                        android:textAlignment="center"
+                        android:textColor="@color/text_dark"
+                        android:textSize="13sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+
+            <!-- Status Logs -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛡️ Catatan Sistem Keamanan CCTV:"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_muted"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semua data rekaman disimpan di Server Cloud RT selama 30 hari. Warga berhak meminta salinan rekaman untuk keperluan darurat atau laporan kepada kepolisian."
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- SECTION 3: KEGIATAN SOSIAL -->
+        <ScrollView
+            android:id="@+id/section_social"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🤝 Gotong Royong &amp; Sosial RT 02"
+                    android:textColor="@color/text_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mari berpartisipasi mewujudkan RT yang kompak dan asri"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Event Block 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📅 Minggu, 7 June 2026"
+                                android:textColor="@color/primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="@color/primary_light"
+                                android:text="WAJIB"
+                                android:textColor="@color/primary"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/social_title_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Pembersihan Saluran Air &amp; Fogging DBD"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="📍 Lokasi: Area Saluran Utama Blok F &amp; G\n⏰ Waktu: 07.00 WIB - Selesai"
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Diharapkan setiap rumah mengirimkan minimal 1 perwakilan warga untuk bergotong-royong. Alat kebersihan disediakan masing-masing."
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@color/divider_line" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/social_counter_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="👥 RSVP: 28 Warga Terdaftar"
+                                android:textColor="@color/primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true" />
+
+                            <Button
+                                android:id="@+id/btn_rsvp_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="Daftar Hadir"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Event Block 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📅 Sabtu, 20 June 2026"
+                                android:textColor="@color/accent_blue"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="@color/accent_blue_light"
+                                android:text="REGULER"
+                                android:textColor="@color/accent_blue"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/social_title_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Rapat Pertemuan &amp; Arisan Bulanan Ibu-Ibu"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="📍 Lokasi: Balai Posyandu Lapangan RT\n⏰ Waktu: 19.30 WIB - Selesai"
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Agenda: Pembahasan Kas PKK, Program Keindahan Lingkungan Rumah, dan Pembukaan Arisan Juni."
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@color/divider_line" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/social_counter_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="👥 RSVP: 15 Warga Terdaftar"
+                                android:textColor="@color/accent_blue"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true" />
+
+                            <Button
+                                android:id="@+id/btn_rsvp_2"
+                                style="@style/Widget.Material3.Button.Tonal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="Daftar Hadir"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- SECTION 4: PEMBAYARAN IURAN & KEAMANAN MALMING -->
+        <ScrollView
+            android:id="@+id/section_payments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Tab Segment Buttons for sub-activities inside Payments & Rondos -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ic_launcher_background"
+                    android:backgroundTint="@color/divider_line"
+                    android:padding="3dp"
+                    android:layout_marginBottom="16dp">
+
+                    <Button
+                        android:id="@+id/btn_sub_tab_iuran"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💵 Iuran Bulanan"
+                        android:textSize="12sp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp" />
+
+                    <Button
+                        android:id="@+id/btn_sub_tab_ronda"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔏 Jadwal Malming"
+                        android:textColor="@color/text_dark"
+                        android:textSize="12sp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp" />
+                </LinearLayout>
+
+                <!-- IURAN SUB-CONTAINER -->
+                <LinearLayout
+                    android:id="@+id/sub_container_iuran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💳 Pembayaran &amp; Kas Warga"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biaya Kebersihan Lingkungan, Angkut Sampah &amp; Patroli Pos Siskamling"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Quick Information Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/accent_blue_light"
+                            android:orientation="vertical"
+                            android:padding="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Informasi Tarif Iuran:"
+                                android:textColor="@color/accent_blue"
+                                android:textStyle="bold"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="• Nominal iuran: Rp 50.000 / Bulan\n• Meliputi: Kebersihan (30rb), Keamanan Malming (20rb)"
+                                android:textColor="@color/text_dark"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Interactive Payment Form Checker -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🔎 Cek Status Pembayaran"
+                                android:textColor="@color/text_dark"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="12dp">
+
+                                <!-- Spinner/Selection of block -->
+                                <Spinner
+                                    android:id="@+id/spin_payment_block"
+                                    android:layout_width="0dp"
+                                    android:layout_height="48dp"
+                                    android:layout_weight="1"
+                                    android:background="@android:drawable/btn_dropdown"
+                                    android:spinnerMode="dropdown" />
+
+                                <Spinner
+                                    android:id="@+id/spin_payment_house"
+                                    android:layout_width="0dp"
+                                    android:layout_height="48dp"
+                                    android:layout_weight="1"
+                                    android:background="@android:drawable/btn_dropdown"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btn_cek_iuran"
+                                style="@style/Widget.Material3.Button.Tonal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="Cek Status Tagihan" />
+
+                            <!-- Dynamic bill card -->
+                            <LinearLayout
+                                android:id="@+id/bill_status_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="12dp"
+                                android:padding="12dp"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="#FFF0F2F5"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/bill_target_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="PENGUMUMAN TAGIHAN: Rumah F-05"
+                                    android:textColor="@color/text_dark"
+                                    android:textStyle="bold"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/bill_month_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Status Bulan Juni 2026: BELUM LUNAS ❌"
+                                    android:textColor="@color/active_red"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nominal Tagihan: Rp 50.000"
+                                    android:textColor="@color/text_muted"
+                                    android:textSize="12sp" />
+
+                                <Button
+                                    android:id="@+id/btn_pay_now_sim"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="💳 Bayar Sekarang (Simulasi QRIS)"
+                                    android:backgroundTint="@color/accent_blue" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Mock History Logs -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📜 Riwayat Transaksi Kas Terbaru RT 02"
+                                android:textColor="@color/text_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tx_payment_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="1. F-12 (Bp. Joko) - Lunas Mei &amp; Juni • 31/05\n2. G-03 (Bp. Bambang) - Lunas Juni • 30/05\n3. F-18 (Ibu Sari) - Kebersihan Juni • 29/05"
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="4dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!-- RONDA SCHEDULE MALMING SUB-CONTAINER -->
+                <LinearLayout
+                    android:id="@+id/sub_container_ronda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔏 Jadwal Siskamling Ronda Malming"
+                        android:textColor="@color/text_dark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wajib jaga malam demi keamanan lingkungan, berkumpul di Pos Ronda"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Roster Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="14sp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📅 Regu Jaga Ronda Malam Minggu ini (21.00 - 04.00)"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="• Kelompok Mawar (Blok F-01 s/d F-10)\n  Tanggung Jawab: Portal Utama &amp; Lorong Jalan Mawar\n  Koordinator: Bp. Hendra (F-04)\n• Kelompok Melati I (Blok G-01 s/d G-10)\n  Tanggung Jawab: Lorong Jalan Melati &amp; Balai RT\n  Koordinator: Bp. Danu (G-03)"
+                                android:textColor="@color/text_dark"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="3dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Incident condition reporter -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🚨 Lapor Kondisi / Lapor Pak RT"
+                                android:textColor="@color/active_red"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Laporkan kondisi lingkungan saat bertugas siskamling"
+                                android:textColor="@color/text_muted"
+                                android:textSize="11sp" />
+
+                            <!-- Reporter name -->
+                            <EditText
+                                android:id="@+id/et_reporter_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="12dp"
+                                android:hint="Nama Warga / Petugas"
+                                android:inputType="textPersonName"
+                                android:padding="10dp"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="#10000000"
+                                android:textSize="13sp" />
+
+                            <!-- Report Message -->
+                            <EditText
+                                android:id="@+id/et_reporter_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="65dp"
+                                android:layout_marginTop="8dp"
+                                android:hint="Detail Laporan (contoh: Pos Ronda Aman Kondusif)"
+                                android:inputType="textMultiLine"
+                                android:padding="10dp"
+                                android:background="@drawable/ic_launcher_background"
+                                android:backgroundTint="#10000000"
+                                android:gravity="top"
+                                android:textSize="13sp" />
+
+                            <Button
+                                android:id="@+id/btn_submit_report"
+                                style="@style/Widget.Material3.Button.Tonal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="Kirim Laporan Ke Pak RT"
+                                android:textColor="@color/active_red" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Realtime security feeds -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📢 Laporan Siskamling Hari Ini"
+                                android:textColor="@color/text_dark"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tx_security_reports"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="🟢 [10:15] POS UTAMA: Tamu logistik (kurir) masuk, aman.\n🟢 [02:30] GANG MAWAR F: Patroli keliling lancar, kompor warga mati aman.\n🟢 [01:00] POS ROUNDA: Serah terima regu ronda, lengkap 10 personil."
+                                android:textColor="@color/text_muted"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="4dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- SECTION 5: INTERACTIVE COURIER ACCESS MAP -->
+        <LinearLayout
+            android:id="@+id/section_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Rute Akses Kurir &amp; Ojol RT 02"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Satu Gerbang Portal (One-Gate) memandu pengiriman paket"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                android:layout_bottom="10dp" />
+
+            <!-- Selector Block Target -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Masukkan Alamat Blok Tujuan Kurir:"
+                        android:textColor="@color/text_dark"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Spinner
+                            android:id="@+id/spin_map_block"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_dropdown" />
+
+                        <Spinner
+                            android:id="@+id/spin_map_num"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_dropdown" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tx_map_guide_instructions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Kondisi Panduan: Melewati Portal Utama ➔ Ambil lajur barat (Jalan Mawar F) untuk Blok F / lajur timur (Jalan Melati G) untuk Blok G."
+                        android:textColor="@color/primary"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CUSTOM DRAWN VECTOR MAP CANVAS VIEW -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/divider_line"
+                app:strokeWidth="1dp">
+
+                <com.example.MapCanvasView
+                    android:id="@+id/custom_courier_map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- BOTTOM MATERIAL NAVIGATION -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="12dp"
+        app:itemIconSize="22dp"
+        app:itemRippleColor="@color/primary_light"
+        app:itemTextColor="@color/primary"
+        app:itemIconTint="@color/primary"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

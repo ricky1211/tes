@@ -1,0 +1,50 @@
+<resources>
+    <string name="understand">Saya Mengerti</string>
+    <string name="cancel">Batal</string>
+    <string name="validation_empty">Nama dan alamat rumah wajib diisi!</string>
+    <string name="validation_report_empty">Nama dan isi laporan siskamling wajib diisi!</string>
+    <string name="report_submitted_toast">Laporan Siskamling dikirim ke Pak RT!</string>
+    <string name="confirm_attendance">Konfirmasi Kehadiran</string>
+
+    <string name="rsvp_counter_format">👥 RSVP: %1$d Warga Terdaftar</string>
+    <string name="rsvp_dialog_title">Daftar Hadir / RSVP</string>
+    <string name="event_label">Acara: %1$s</string>
+    <string name="rsvp_thank_you">Terima kasih Bp/Ibu %1$s (%2$s) atas konfirmasinya!</string>
+
+    <string name="block_f_label">Blok F (Jalan Mawar)</string>
+    <string name="block_g_label">Blok G (Jalan Melati)</string>
+
+    <string name="cam_01_title">CAM 01 - Portal Gerbang Utama</string>
+    <string name="cam_02_title">CAM 02 - Belakang Pos Ronda</string>
+    <string name="cam_03_title">CAM 03 - Gang Mawar Blok F</string>
+    <string name="cam_04_title">CAM 04 - Gang Melati Blok G</string>
+
+    <string name="event_name_1">Pembersihan Saluran Air &amp; Fogging DBD</string>
+    <string name="event_name_2">Rapat Pertemuan &amp; Arisan Bulanan Ibu-Ibu</string>
+
+    <string name="default_report_1">🟢 [02:30] GANG MAWAR F: Patroli keliling lancar, kompor warga mati aman.\n</string>
+    <string name="default_report_2">🟢 [01:00] POS RONDA: Serah terima regu ronda, lengkap 10 personil.</string>
+
+    <string name="bill_detail_title">DETAIL TAGIHAN: Rumah %1$s</string>
+    <string name="status_paid">Status Bulan Juni 2026: LUNAS 🟢</string>
+    <string name="status_unpaid">Status Bulan Juni 2026: BELUM LUNAS ❌</string>
+    <string name="status_paid_simple">Lunas Keamanan 🟢</string>
+    <string name="status_unpaid_simple">Menunggak Keamanan ❌</string>
+
+    <string name="qris_house_detail">Detail Tagihan Rumah: %1$s (Blok F/G)</string>
+    <string name="qris_billing_id">Billing-ID RT: RT02GC-%1$s-%2$d</string>
+    <string name="payment_success_toast">Pembayaran Sukses! Rumah %1$s Dinyatakan Lunas 🟢</string>
+
+    <string name="map_selection_instruction">Kurung Rute Paket Aktif: Gerbang Portal Kesatuan ➔ Menuju Blok %1$s-%2$s.\nStatus Iuran Rumah: %3$s</string>
+    <string name="map_route_f">Kondisi Panduan Paket: Masuki PORTAL UTAMA Samping Pos Ronda ➔ Belok Kiri mengitari Jalan Mawar. Blok F-0%1$s terletak di sisi lajur barat.</string>
+    <string name="map_route_g">Kondisi Panduan Paket: Masuki PORTAL UTAMA Samping Pos Ronda ➔ Belok Kanan mengitari Jalan Melati. Blok G-0%1$s terletak di sisi lajur timur.</string>
+
+    <string name="ann_title_1">Pembayaran Iuran Bulanan Wisma &amp; Keamanan</string>
+    <string name="ann_body_1">Diberitahukan kepada seluruh warga RT 02 Blok F dan Blok G Perum Graha Cikarang bahwa iuran bulan Juni 2026 sebesar Rp 50.000,- per rumah (kebersihan &amp; pembersihan sampah harian Rp 30.000,-, iuran ronda keamanan malam Rp 20.000,-) wajib disetorkan paling lambat tanggal 10 Juni 2026 kepada Bendahara RT.\n\nPembayaran dapat ditransfer secara online di menu \'Iuran &amp; Ronda\' di aplikasi HP RT ini atau menyambangi Bendahara RT.\n\nKeikutsertaan warga menjamin lancarnya siskamling lingkungan.</string>
+
+    <string name="ann_title_2">Gotong Royong &amp; Fogging Nyamuk Mandiri</string>
+    <string name="ann_body_2">Sehubungan dengan dilaporkannya 2 kasus demam berdarah di lingkungan kelurahan Pekayon, Pengurus RT 02 Perum Graha Cikarang menginstruksikan kegiatan gotong royong massal pada hari Minggu, 7 Juni 2026 jam 07:00 WIB.\n\nFokus kegiatan:\n1. Pembersihan wadah air &amp; selokan mampet\n2. Pemberantasan sarang nyamuk (PSN)\n3. Fogging kimia di sekeliling Blok F dan G.\n\nDiharapkan kehadiran minimal satu anggota keluarga pria untuk membantu. Minuman &amp; snack disediakan panitia PKK.</string>
+
+    <string name="ann_title_3">Sistem Satu Pintu Tamu Wajib Lapor</string>
+    <string name="ann_body_3">Demi menjaga keamanan dan ketertiban lingkungan komplek, siskamling RT 02 memperketat kebijakan keluar masuk kendaraan:\n\n1. Seluruh pintu portal alternatif menuju blok luar ditutup jam 21:00 WIB. Akses penuh dilarikan melintasi PORTAL GERBANG UTAMA (Satu Pintu).\n\n2. Tamu yang berkunjung dan menginap lebih dari 1x24 jam harap dilaporkan oleh tuan rumah ke ketua RT atau koordinator pos siaga Keamanan beserta KTP tamu.\n\nHormat kami,\nPengurus RT 02</string>
+</resources>

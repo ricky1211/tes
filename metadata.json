@@ -1,0 +1,6 @@
+{
+  "name": "RT 02 Graha Cikarang",
+  "description": "Aplikasi Portal Warga RT 02 Perum Graha Cikarang dengan fitur Pengumuman, CCTV Live Simulasi, Kegiatan Sosial, Pembayaran Iuran Wisma & Siskamling, serta Peta Akses Kurir.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_announcements"
+        android:icon="@drawable/ic_announcement"
+        android:title="Pengumuman" />
+    <item
+        android:id="@+id/nav_cctv"
+        android:icon="@drawable/ic_cctv"
+        android:title="CCTV RT" />
+    <item
+        android:id="@+id/nav_social"
+        android:icon="@drawable/ic_social"
+        android:title="Kegiatan" />
+    <item
+        android:id="@+id/nav_payments"
+        android:icon="@drawable/ic_payment"
+        android:title="Iuran &amp; Ronda" />
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@drawable/ic_map"
+        android:title="Peta Akses" />
+</menu>
